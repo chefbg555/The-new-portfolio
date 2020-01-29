@@ -1,38 +1,300 @@
-.App {
+body {
+  margin:0;
+  padding:0;
+  width:100vw;
+  list-style-type: none;
+  text-decoration: none;
+}
+/* WEATHER APP */
+.weather1-container{
+  background-image: url(./images/weatherbackground2.jpg);
+  background-size: cover;
+  height:100vh ;
+  width:auto;
+  text-align: center;
+  font-size:4rem;
+  font-weight: bolder;
+}
+.city-search input{
+  height:2rem;
+  width:25rem;
+  text-align: center;
+  outline:none;
+  font-size: 1.5rem;;
+
+}
+
+.weather-cities-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size:3rem;
+  margin-top:2rem;
+  margin-right:1rem;
+  margin-left: 1rem;
+}
+.weather-cities:hover{
+transform: scale(1.3);
+}
+  
+
+.weather-cities h3{
+  font-size: 1.3rem;
+  margin-right:20px;
+  color:darkorange;
+  text-decoration: none;
+  
+}
+.weather2-container{
+  background-image: url(./images/weatherbackground2.jpg);
+  background-size: cover;
+  height:100vh ;
+
+}
+.city-header{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.forecast-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
+  justify-items: center;
+ 
+}
+.forecast-div{
+  display:grid;
+  justify-items: center;
+  text-align: center;
+  height:75%;
+}
+table{
+  table-layout: fixed;
+  width:95%;
+  border: 4px solid black;
+  background-color: white;
+  background-size: cover;
+}
+th{
+  border:1px solid black;
+}
+
+.forecast-img{
+  max-width:80px;
+}
+.homelinks{
+  position: relative;
+}
+.home-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  outline:2px;
+}
+.home-links img{
+  height:50vh;
+  width:50vw;
+  border:10px;
+  object-fit: cover;
+  transition: all 1s ease-in-out;
+}
+.home-links img:hover{
+  opacity: 0.4;
+}
+.todoapp{
+  position:absolute;
+  margin-right:auto;
+  margin-left:auto;
+  color:White;
+  font-size:2rem;
+  background-color: darkorange;
+  z-index: 1;
+}
+
+
+
+/* ABOUT ME */
+
+
+.brendan{
+  height:100vh;
+  width:100vw;
+}
+.instagram{
+  position:absolute;
+  margin:0;
+  padding:0;
+  top:20vh;
+  left:33vw;
+  transition: transform 0.3s; 
+}
+.instagram img{
+  height:300px;
+  width:475px;
+}
+.instagram:hover{
+  transform: scale(1.2);
+}
+.demo .large-header {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
+}
+.typist-container{
+  position:absolute;
+  top:70vh;
+  left:5vw;
+}
+.Typist{
+  color:white;
+  font-size:3rem;
+}
+canvas{
+  height:100vh;
+} 
+.main-title {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: #F9F1E9;
+  text-align: center;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.demo .main-title {
+  text-transform: uppercase;
+  font-size:2rem;
+  letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+   font-weight: 200;
+}
+
+.handle .thin{
+  font-weight: 100;
+}
+
+.large-header {
+  position: relative;
+  width: 100vw;
+  height:100vh;
+  background: #111;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.handle img{
+ height:80px;
+ width:200px;
+}
+
+.handle{
+ position: absolute;
+ margin: 0;
+ padding: 0;
+ top: 25vh;
+ left:78vw;
+ transition: transform 0.3s; 
+}
+
+.handle:hover{
+ transform: scale(1.2);
+}
+
+.linked-in{
+ position:absolute;
+ margin:0;
+ padding:0;
+ top:45vh;
+ left:80vw;
+ transition: transform 0.3s; 
+}
+
+.linked-in img{
+ height:150px;
+ width:150px;
+}
+
+.linked-in:hover{
+ transform: scale(1.2);
+}
+.refresh-button{
+  position: absolute;
+  top:35vh;
+  left:10vw;
+}
+
+
+.refresh-button  {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	background-color:#f9f9f9;
+	border-radius:10px;
+	border:2px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Trebuchet MS;
+	font-size:20px;
+	font-weight:bold;
+	padding:20px 55px;
+	text-decoration:none;
+  text-shadow:0px 0px 0px #ffffff;
+  outline: none;
+}
+.refresh-button :hover {
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	background-color:#e9e9e9;
+}
+.refresh-button :active {
+	position:relative;
+	top:1px;
+}
+.home-button button{
+  color:#F9F1E9;
+  opacity:0.1;  
+}
+.home-button button:hover{
+  opacity:1;
+}
+.home-button button:active{
+  color:orange;
+}
+
+
+.component{
+  text-align:center;
+  background:lightcoral;
+  padding:1rem;
+}
+.todoList{
+  list-style-type: none;
+  padding:1rem;
+}
+.todo{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background: lightblue;
+  padding:1rem;
+  margin-top:1rem;
+}
+.todo a{
+  margin-left: auto;
+  text-decoration: none;
+  padding:1rem;
+  font-weight: bolder;
+  line-height:10px;
+}
+.component input{
+  width:75%;
+  height:3rem;
+}
+.component-container{
+  height:100vh;
+  width:100vw;
+  background-color: indigo;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
