@@ -1,7 +1,4 @@
-import React, { Component } from 'react'
-
-
-
+import * as THREE from "three"
 (function() {
   // Set our main variables
   let scene,  
@@ -18,21 +15,11 @@ import React, { Component } from 'react'
     raycaster = new THREE.Raycaster(),  // Used to detect the click on our character
     loaderAnim = document.getElementById('js-loader');
   
-  })();
+    init(); 
 
-class Home extends Component{
-  render(){
-    return(
- 
-      <div>
-        <h1 className="landing-header">Hey I'm Brendan Guralsky</h1>
-        <h2  className="landing-portfolio">and this is my portfolio </h2>
-      </div>
-        
-      <div className="wrapper">
-        <canvas id="c"></canvas>
-      </div>
-    )
-  }
-}
-export default Home
+    function init() {
+      const canvas = document.querySelector('#c');
+      const backgroundColor = 0xf1f1f1;
+    
+    }
+  })();

@@ -89,7 +89,6 @@ th{
   display:grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  outline:2px;
 }
 .home-links img{
   height:50vh;
